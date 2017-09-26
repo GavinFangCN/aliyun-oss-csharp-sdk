@@ -475,8 +475,8 @@ namespace Aliyun.OSS.Common.Communication
                 // mono: AddWithoutValidate
                 // win: AddInternal
                 var internalMethodName = (_isMonoPlatform == true) ? "AddWithoutValidate" :
-#if NETSTANDARD2_0 || NET40
-             "AddWithoutValidate";
+#if NETSTANDARD2_0
+             "Add";
 #else
              "AddInternal";
 #endif

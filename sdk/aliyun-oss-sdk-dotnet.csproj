@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <AssemblyName>Aliyun.OSS</AssemblyName>
-    <TargetFrameworks>netstandard2.0;net20;</TargetFrameworks>
+    <RootNamespace>Aliyun.OSS</RootNamespace>
+    <TargetFrameworks>netstandard2.0;net20;net40;</TargetFrameworks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>Aliyun.OSS.DotNetCore</PackageId>
@@ -44,7 +45,7 @@
     <DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net20'">
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net20' OR '$(TargetFramework)' == 'net40'">
     <DefineConstants>$(DefineConstants);NETFULL</DefineConstants>
   </PropertyGroup>
 
@@ -55,7 +56,19 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\MimeData.txt" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 
 
 </Project>

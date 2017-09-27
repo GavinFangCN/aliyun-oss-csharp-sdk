@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Aliyun.OSS.Samples")]
-[assembly: AssemblyDescription("Aliyun OSS SDK Samples for C#")]
+[assembly: AssemblyDescription("Aliyun OSS SDK for .NET Core 2.0+")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Alibaba Cloud Computing")]
 [assembly: AssemblyProduct("Aliyun.OSS.Samples")]

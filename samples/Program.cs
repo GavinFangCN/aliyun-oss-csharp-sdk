@@ -1,22 +1,30 @@
 ﻿using System;
+using System.Text;
+#if NETSTANDARD || NET40
+using System.Threading.Tasks;
+#endif
 using Aliyun.OSS.Common;
 
 namespace Aliyun.OSS.Samples
 {
     public class Program
     {
+        const string bucketName = "<your bucket name>";
+
         /// <summary>
         /// SDK的示例程序
         /// </summary>
         public static void Main(string[] args)
         {
-            Console.WriteLine("Aliyun SDK for .NET Samples!");
+#if NETSTANDARD
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+#endif
 
-            const string bucketName = "<your bucket name>";
+            Console.WriteLine("Aliyun SDK for .NET Samples!");
 
             try
             {
-                CreateBucketSample.CreateBucket(bucketName);
+                //CreateBucketSample.CreateBucket(bucketName);
 
                 //ListBucketsSample.ListBuckets();
 
@@ -99,14 +107,17 @@ namespace Aliyun.OSS.Samples
                 //DeleteBucketSample.DeleteNoEmptyBucket(bucketName);
 
                 //SetObjectAclSample.SetObjectAcl(bucketName);
-                
+
                 //GetObjectAclSample.GetBucketAcl(bucketName);
-                
+
                 //ImageProcessSample.ImageProcess(bucketName);
 
                 //ProgressSample.Progress(bucketName);
 
                 //UploadCallbackSample.UploadCallback(bucketName);
+#if NETSTANDARD || NET40
+                AsyncDemo().Wait();
+#endif  
             }
             catch (OssException ex)
             {
@@ -121,5 +132,15 @@ namespace Aliyun.OSS.Samples
             Console.WriteLine("Press any key to continue . . . ");
             Console.ReadKey(true);
         }
+#if NETSTANDARD || NET40
+        static async Task AsyncDemo()
+        {
+            await AsyncSample.PutObjectFromFile(bucketName);
+            await AsyncSample.ListObjectsWithRequest(bucketName);
+            await AsyncSample.SimpleListObjects (bucketName);
+            await AsyncSample.GetObject(bucketName);
+            await AsyncSample.AppendObject(bucketName);
+        }
+#endif
     }
 }

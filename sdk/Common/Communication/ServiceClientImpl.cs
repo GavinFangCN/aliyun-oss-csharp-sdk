@@ -430,7 +430,7 @@ namespace Aliyun.OSS.Common.Communication
                 // win: AddInternal
                 var internalMethodName = (_isMonoPlatform == true) ? "AddWithoutValidate" :
 #if NETSTANDARD2_0
-             "Add";
+             "AddWithoutValidate";
 #else
              "AddInternal";
 #endif
@@ -438,7 +438,7 @@ namespace Aliyun.OSS.Common.Communication
 
                 var mi = typeof(WebHeaderCollection).GetMethod(
                     internalMethodName,
-                    BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public,
+                    BindingFlags.NonPublic | BindingFlags.Instance,
                     null,
                     new Type[] { typeof(string), typeof(string) },
                     null);

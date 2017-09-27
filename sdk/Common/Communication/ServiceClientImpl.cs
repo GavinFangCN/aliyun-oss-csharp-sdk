@@ -438,7 +438,7 @@ namespace Aliyun.OSS.Common.Communication
 
                 var mi = typeof(WebHeaderCollection).GetMethod(
                     internalMethodName,
-                    BindingFlags.NonPublic | BindingFlags.Instance,
+                    BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public,
                     null,
                     new Type[] { typeof(string), typeof(string) },
                     null);

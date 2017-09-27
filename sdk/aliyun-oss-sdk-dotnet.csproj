@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Aliyun.OSS</AssemblyName>
     <RootNamespace>Aliyun.OSS</RootNamespace>
-    <TargetFrameworks>netstandard2.0;net20;net40;</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net40;</TargetFrameworks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>Aliyun.OSS.DotNetCore</PackageId>
@@ -36,16 +36,11 @@
   </PropertyGroup>
 
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net20'">
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-
   <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0' ">
     <DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net20' OR '$(TargetFramework)' == 'net40'">
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net40'">
     <DefineConstants>$(DefineConstants);NETFULL</DefineConstants>
   </PropertyGroup>
 

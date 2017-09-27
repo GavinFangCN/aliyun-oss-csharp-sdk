@@ -1,31 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-
-    <VersionPrefix>2.5.3</VersionPrefix>
-    <VersionSuffix></VersionSuffix>
-    <Description>Aliyun OSS SDK for .NET Core 2.0+</Description>
     <AssemblyName>Aliyun.OSS</AssemblyName>
-    <AssemblyTitle>Aliyun.OSS</AssemblyTitle>   
     <TargetFrameworks>netstandard2.0;net20;</TargetFrameworks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>Aliyun.OSS.DotNetCore</PackageId>
-
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/vla/aliyun-oss-csharp-sdk</RepositoryUrl>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <AssemblyOriginatorKeyFile>aliyun_sdk_net.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
 
     <Authors>v.la@live.cn</Authors>
+
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/vla/aliyun-oss-csharp-sdk</RepositoryUrl>
     <PackageTags>Aliyun.OSS</PackageTags>
     <PackageIconUrl>http://s.gravatar.com/avatar/28dfa5190889f7190e74b683fc30b827?s=80</PackageIconUrl>
     <PackageProjectUrl>https://github.com/vla/aliyun-oss-csharp-sdk</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/vla/aliyun-oss-csharp-sdk/blob/master/LICENSE</PackageLicenseUrl>
+
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+
   </PropertyGroup>
 
 

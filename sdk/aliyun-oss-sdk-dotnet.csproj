@@ -1,6 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Version>2.5.3</Version>
+    <NoWarn>1591;1573</NoWarn>
     <AssemblyName>Aliyun.OSS</AssemblyName>
     <RootNamespace>Aliyun.OSS</RootNamespace>
     <TargetFrameworks>netstandard2.0;net40;</TargetFrameworks>
@@ -29,12 +31,6 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
 
   </PropertyGroup>
-
-
-  <PropertyGroup>
-    <NoWarn>1591;1573</NoWarn>
-  </PropertyGroup>
-
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0' ">
     <DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>

@@ -3,8 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0;</TargetFrameworks>
     <AssemblyName>Aliyun.OSS.Samples</AssemblyName>
-    <AssemblyTitle>Aliyun.OSS.Samples</AssemblyTitle>
-    <RootNamespace>Aliyun.OSS.Samples</RootNamespace>
+    <AssemblyTitle>Aliyun.OSS.Samples</AssemblyTitle>  
     <OutputType>Exe</OutputType>
 
 
@@ -28,10 +27,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\sdk\aliyun-oss-sdk-dotnet.csproj" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0'">
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.4.0" />
   </ItemGroup>
 
 </Project>

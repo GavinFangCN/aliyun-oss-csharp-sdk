@@ -163,7 +163,8 @@ namespace Aliyun.OSS.Common.Communication
 
         #endregion
 
-        #region Implementations
+        
+#region Implementations
 
         protected override ServiceResponse SendCore(ServiceRequest serviceRequest,
                                                     ExecutionContext context)
@@ -364,7 +365,6 @@ namespace Aliyun.OSS.Common.Communication
         }
 
         #endregion
-
     }
 
 
